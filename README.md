@@ -6,7 +6,8 @@ It is tested under different retrieval frameworks such as DSH, HashNet, GreedyHa
 
 
 
-![VTS](VTS.JPG)
+<img width="1328" height="806" alt="image" src="https://github.com/user-attachments/assets/11a21848-66b5-4ca2-b55d-cd3eb3bc79ba" />
+
 
 
 
