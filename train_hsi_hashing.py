@@ -109,7 +109,7 @@ def run_training(args):
     if args.loss == "csq":
         criterion = CSQLoss(args.hash_bit_length, num_classes=int(dataset.labels.max()) + 1, bit_balance_weight=0.5, diversity_weight=0.5)
     elif args.loss == "dpn":
-        criterion = DPNLoss(args.hash_bit_length)
+        criterion = DPNLoss(args.hash_bit_length, num_classes=int(dataset.labels.max()) + 1)
     else:
         raise ValueError(f"Unsupported loss: {args.loss}")
 
@@ -121,7 +121,7 @@ def run_training(args):
             labels = labels.to(args.device)
             optimizer.zero_grad()
             logits = model(images)
-            if args.loss == "csq":
+            if args.loss in ["csq", "dpn"]:
                 loss = criterion(logits, labels)
             else:
                 loss = criterion(logits)
