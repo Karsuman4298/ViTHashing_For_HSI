@@ -68,7 +68,7 @@ def evaluate_model(model, dataset, split, device, batch_size):
             for images, labels in loader:
                 images = images.to(device)
                 logits = model(images)
-                bits = torch.where(logits >= 0, torch.tensor(1), torch.tensor(-1)).to(device)
+                bits = torch.where(logits >= 0, torch.ones_like(logits, dtype=torch.int8), -torch.ones_like(logits, dtype=torch.int8)).to(device)
                 hash_list.append(bits.cpu().numpy())
                 label_list.append(labels.numpy())
     q_hash = np.concatenate(q_hash)
@@ -107,7 +107,7 @@ def run_training(args):
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
 
     if args.loss == "csq":
-        criterion = CSQLoss(args.hash_bit_length, num_classes=int(dataset.labels.max()) + 1)
+        criterion = CSQLoss(args.hash_bit_length, num_classes=int(dataset.labels.max()) + 1, bit_balance_weight=0.5, diversity_weight=0.5)
     elif args.loss == "dpn":
         criterion = DPNLoss(args.hash_bit_length)
     else:

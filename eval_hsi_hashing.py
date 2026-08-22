@@ -22,7 +22,7 @@ def resolve_device(arg_device: str | None = None) -> torch.device:
 
 
 def binary_hash_from_logits(logits):
-    return torch.where(logits >= 0, torch.tensor(1), torch.tensor(-1)).cpu().numpy()
+    return torch.where(logits >= 0, torch.ones_like(logits, dtype=torch.int8), -torch.ones_like(logits, dtype=torch.int8)).cpu().numpy()
 
 
 def hash_collapse_diagnostic(logits, batch_size=None):
@@ -30,7 +30,7 @@ def hash_collapse_diagnostic(logits, batch_size=None):
     signs = torch.sign(logits)
     binary = torch.where(logits >= 0, torch.ones_like(logits, dtype=torch.int8), -torch.ones_like(logits, dtype=torch.int8))
     mean_per_bit = binary.float().mean(dim=0)
-    unique_codes = torch.unique(binary, dim=0).shape[0]
+    unique_codes = torch.unique(binary.cpu(), dim=0).shape[0]
     print("mean per-bit sign:", mean_per_bit.cpu().numpy())
     print("unique codes in batch:", unique_codes)
     if (mean_per_bit.abs() > 0.8).any() or unique_codes < max(2, min(10, logits.shape[0] // 10)):
@@ -93,7 +93,9 @@ def evaluate(args):
 
     checkpoint = Path(args.checkpoint)
     if checkpoint.exists():
-        state = torch.load(checkpoint, map_location=args.device)
+        state = torch.load(checkpoint, map_location=args.device, weights_only=False)
+        if isinstance(state, dict) and "model_state" in state:
+            state = state["model_state"]
         model.load_state_dict(state)
     else:
         print(f"Warning: checkpoint not found at {checkpoint}; using untrained model for evaluation.")
