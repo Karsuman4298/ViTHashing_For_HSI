@@ -1,0 +1,470 @@
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{longtable}{llrrrrrr}
+\caption{Retrieval mAP (\%) using CLS-only and all features at 16, 32, and 64 bits. Bold indicates the better feature mode for the same dataset, backbone, loss and bit length (ties at the displayed precision are bold). -- denotes an unmeasured result; N/A denotes an explicitly inapplicable mode.}\label{tab:cls-all-hashing}\\
+\toprule
+ & & \multicolumn{3}{c}{CLS-only features} & \multicolumn{3}{c}{All features}\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Backbone & Loss & 16 bits & 32 bits & 64 bits & 16 bits & 32 bits & 64 bits\\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}{\tablename\ \thetable{} -- continued}\\
+\toprule
+ & & \multicolumn{3}{c}{CLS-only features} & \multicolumn{3}{c}{All features}\\
+Backbone & Loss & 16 bits & 32 bits & 64 bits & 16 bits & 32 bits & 64 bits\\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{8}{c}{\textbf{Houston2013}}\\*
+\midrule
+SSFTT & CSQ & -- & -- & -- & -- & -- & -- \\
+SSFTT & DPN & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSH & -- & -- & -- & -- & -- & -- \\
+SSFTT & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & HashNet & -- & -- & -- & -- & -- & -- \\
+SSFTT & IDHN & -- & -- & -- & -- & -- & -- \\
+SSFTT & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSFTT & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MoE-Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SSRN & CSQ & -- & -- & -- & -- & -- & -- \\
+SSRN & DPN & -- & -- & -- & -- & -- & -- \\
+SSRN & DSH & -- & -- & -- & -- & -- & -- \\
+SSRN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSRN & HashNet & -- & -- & -- & -- & -- & -- \\
+SSRN & IDHN & -- & -- & -- & -- & -- & -- \\
+SSRN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSRN & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSRN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+A2S2KResNet & CSQ & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DPN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & HashNet & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & IDHN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+ContextualNet & CSQ & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DPN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & HashNet & -- & -- & -- & -- & -- & -- \\
+ContextualNet & IDHN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-2D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-2D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-3D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-3D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+HybridSN & CSQ & -- & -- & -- & -- & -- & -- \\
+HybridSN & DPN & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSH & -- & -- & -- & -- & -- & -- \\
+HybridSN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & HashNet & -- & -- & -- & -- & -- & -- \\
+HybridSN & IDHN & -- & -- & -- & -- & -- & -- \\
+HybridSN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSPCH & -- & -- & -- & -- & -- & -- \\
+HybridSN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MorphFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DPN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+MorphFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SpectralFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DPN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+\multicolumn{8}{c}{\textbf{Houston2018}}\\*
+\midrule
+SSFTT & CSQ & -- & -- & -- & -- & -- & -- \\
+SSFTT & DPN & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSH & -- & -- & -- & -- & -- & -- \\
+SSFTT & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & HashNet & -- & -- & -- & -- & -- & -- \\
+SSFTT & IDHN & -- & -- & -- & -- & -- & -- \\
+SSFTT & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSFTT & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MoE-Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SSRN & CSQ & -- & -- & -- & -- & -- & -- \\
+SSRN & DPN & -- & -- & -- & -- & -- & -- \\
+SSRN & DSH & -- & -- & -- & -- & -- & -- \\
+SSRN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSRN & HashNet & -- & -- & -- & -- & -- & -- \\
+SSRN & IDHN & -- & -- & -- & -- & -- & -- \\
+SSRN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSRN & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSRN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+A2S2KResNet & CSQ & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DPN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & HashNet & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & IDHN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+ContextualNet & CSQ & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DPN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & HashNet & -- & -- & -- & -- & -- & -- \\
+ContextualNet & IDHN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-2D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-2D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-3D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-3D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+HybridSN & CSQ & -- & -- & -- & -- & -- & -- \\
+HybridSN & DPN & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSH & -- & -- & -- & -- & -- & -- \\
+HybridSN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & HashNet & -- & -- & -- & -- & -- & -- \\
+HybridSN & IDHN & -- & -- & -- & -- & -- & -- \\
+HybridSN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSPCH & -- & -- & -- & -- & -- & -- \\
+HybridSN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MorphFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DPN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+MorphFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SpectralFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DPN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+\multicolumn{8}{c}{\textbf{Trento}}\\*
+\midrule
+SSFTT & CSQ & -- & -- & -- & -- & -- & -- \\
+SSFTT & DPN & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSH & -- & -- & -- & -- & -- & -- \\
+SSFTT & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & HashNet & -- & -- & -- & -- & -- & -- \\
+SSFTT & IDHN & -- & -- & -- & -- & -- & -- \\
+SSFTT & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSFTT & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MoE-Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SSRN & CSQ & -- & -- & -- & -- & -- & -- \\
+SSRN & DPN & -- & -- & -- & -- & -- & -- \\
+SSRN & DSH & -- & -- & -- & -- & -- & -- \\
+SSRN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSRN & HashNet & -- & -- & -- & -- & -- & -- \\
+SSRN & IDHN & -- & -- & -- & -- & -- & -- \\
+SSRN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSRN & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSRN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+A2S2KResNet & CSQ & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DPN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & HashNet & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & IDHN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+ContextualNet & CSQ & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DPN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & HashNet & -- & -- & -- & -- & -- & -- \\
+ContextualNet & IDHN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-2D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-2D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-3D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-3D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+HybridSN & CSQ & -- & -- & -- & -- & -- & -- \\
+HybridSN & DPN & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSH & -- & -- & -- & -- & -- & -- \\
+HybridSN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & HashNet & -- & -- & -- & -- & -- & -- \\
+HybridSN & IDHN & -- & -- & -- & -- & -- & -- \\
+HybridSN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSPCH & -- & -- & -- & -- & -- & -- \\
+HybridSN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MorphFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DPN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+MorphFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SpectralFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DPN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+\multicolumn{8}{c}{\textbf{NiliFossae}}\\*
+\midrule
+SSFTT & CSQ & -- & -- & -- & -- & -- & -- \\
+SSFTT & DPN & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSH & -- & -- & -- & -- & -- & -- \\
+SSFTT & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & HashNet & -- & -- & -- & -- & -- & -- \\
+SSFTT & IDHN & -- & -- & -- & -- & -- & -- \\
+SSFTT & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSFTT & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSFTT & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MoE-Mamba & CSQ & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DPN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & HashNet & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & IDHN & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DSPCH & -- & -- & -- & -- & -- & -- \\
+MoE-Mamba & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SSRN & CSQ & -- & -- & -- & -- & -- & -- \\
+SSRN & DPN & -- & -- & -- & -- & -- & -- \\
+SSRN & DSH & -- & -- & -- & -- & -- & -- \\
+SSRN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SSRN & HashNet & -- & -- & -- & -- & -- & -- \\
+SSRN & IDHN & -- & -- & -- & -- & -- & -- \\
+SSRN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SSRN & DSPCH & -- & -- & -- & -- & -- & -- \\
+SSRN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+A2S2KResNet & CSQ & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DPN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & HashNet & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & IDHN & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+A2S2KResNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+ContextualNet & CSQ & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DPN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & GreedyHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & HashNet & -- & -- & -- & -- & -- & -- \\
+ContextualNet & IDHN & -- & -- & -- & -- & -- & -- \\
+ContextualNet & OrthoHash & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DSPCH & -- & -- & -- & -- & -- & -- \\
+ContextualNet & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-2D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-2D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-2D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-2D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+CNN-3D & CSQ & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DPN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & GreedyHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & HashNet & -- & -- & -- & -- & -- & -- \\
+CNN-3D & IDHN & -- & -- & -- & -- & -- & -- \\
+CNN-3D & OrthoHash & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DSPCH & -- & -- & -- & -- & -- & -- \\
+CNN-3D & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+HybridSN & CSQ & -- & -- & -- & -- & -- & -- \\
+HybridSN & DPN & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSH & -- & -- & -- & -- & -- & -- \\
+HybridSN & GreedyHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & HashNet & -- & -- & -- & -- & -- & -- \\
+HybridSN & IDHN & -- & -- & -- & -- & -- & -- \\
+HybridSN & OrthoHash & -- & -- & -- & -- & -- & -- \\
+HybridSN & DSPCH & -- & -- & -- & -- & -- & -- \\
+HybridSN & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+MorphFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DPN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+MorphFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+MorphFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+MorphFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+SpectralFormer & CSQ & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DPN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & GreedyHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & HashNet & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & IDHN & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & OrthoHash & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DSPCH & -- & -- & -- & -- & -- & -- \\
+SpectralFormer & DHNN & -- & -- & -- & -- & -- & -- \\
+\addlinespace
+\end{longtable}
